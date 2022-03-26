@@ -4,28 +4,73 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  background-color: #000f9c;
+:root {
+  --bgColor1: '#00fff0';
+  --bgColorD: '#ccc';
 }
 
-main {
-  height: 100%;
+
+body {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: var(--bgColor1);
 }
 
-div.iframe {
-  width: 380px;
-  height: 600px;
-  border: 2px solid black;
+/* video {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+} */
+
+div.preview {
+  width: 360px;
+  height: 690px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/smartphonebg.png');
 }
 
+div.preview div.img {
+  top: 80px;
+  left: 40px;
+  width: 280px;
+  height: 530px;
+  position: relative;
+  background: #656565;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/main.png');
+}
+
+div.qrCodes {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: aliceblue;
+}
+
+div.qrCodes div.appWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.qrCodes div.appWrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Slideshow container */
 img {
-  height: 600px;
+  height: 100%;
 }
 
 .slideshow-container {
